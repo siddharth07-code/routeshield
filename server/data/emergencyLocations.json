@@ -1,0 +1,56 @@
+[
+  {
+    "id": "loc-1",
+    "name": "District Hospital",
+    "type": "hospital",
+    "coordinates": [400, 340],
+    "capacity": "250 beds",
+    "status": "operational",
+    "connectedRoads": ["road-8", "road-4", "road-1"]
+  },
+  {
+    "id": "loc-2",
+    "name": "Fire & Rescue Station",
+    "type": "fire_station",
+    "coordinates": [140, 200],
+    "capacity": "4 units",
+    "status": "operational",
+    "connectedRoads": ["road-2", "road-5", "road-10"]
+  },
+  {
+    "id": "loc-3",
+    "name": "Relief Camp A",
+    "type": "relief_camp",
+    "coordinates": [520, 220],
+    "capacity": "500 people",
+    "status": "operational",
+    "connectedRoads": ["road-3", "road-7", "road-9"]
+  },
+  {
+    "id": "loc-4",
+    "name": "Flood-Affected Ward 12",
+    "type": "affected_area",
+    "coordinates": [220, 300],
+    "capacity": null,
+    "status": "at_risk",
+    "connectedRoads": ["road-1", "road-5"]
+  },
+  {
+    "id": "loc-5",
+    "name": "Evacuation Shelter",
+    "type": "shelter",
+    "coordinates": [120, 120],
+    "capacity": "300 people",
+    "status": "operational",
+    "connectedRoads": ["road-6", "road-10"]
+  },
+  {
+    "id": "loc-6",
+    "name": "Emergency Operations Center",
+    "type": "command_center",
+    "coordinates": [380, 380],
+    "capacity": null,
+    "status": "active",
+    "connectedRoads": ["road-4", "road-8"]
+  }
+]

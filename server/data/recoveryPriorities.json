@@ -1,0 +1,72 @@
+[
+  {
+    "roadId": "road-1",
+    "basePriorityScore": 94,
+    "hospitalAccessImpact": "Severe",
+    "alternateRouteAvailable": false,
+    "recommendedAction": "Immediate inspection and emergency restoration"
+  },
+  {
+    "roadId": "road-8",
+    "basePriorityScore": 91,
+    "hospitalAccessImpact": "Severe",
+    "alternateRouteAvailable": false,
+    "recommendedAction": "Deploy engineering team for rapid assessment"
+  },
+  {
+    "roadId": "road-5",
+    "basePriorityScore": 87,
+    "hospitalAccessImpact": "High",
+    "alternateRouteAvailable": true,
+    "recommendedAction": "Clear debris and restore within 6 hours"
+  },
+  {
+    "roadId": "road-2",
+    "basePriorityScore": 78,
+    "hospitalAccessImpact": "Moderate",
+    "alternateRouteAvailable": true,
+    "recommendedAction": "Schedule inspection and stabilize slopes"
+  },
+  {
+    "roadId": "road-6",
+    "basePriorityScore": 74,
+    "hospitalAccessImpact": "Moderate",
+    "alternateRouteAvailable": true,
+    "recommendedAction": "Clear landslide debris and reinforce retaining walls"
+  },
+  {
+    "roadId": "road-4",
+    "basePriorityScore": 71,
+    "hospitalAccessImpact": "Moderate",
+    "alternateRouteAvailable": true,
+    "recommendedAction": "Pump floodwater and restore surface within 12 hours"
+  },
+  {
+    "roadId": "road-9",
+    "basePriorityScore": 58,
+    "hospitalAccessImpact": "Low",
+    "alternateRouteAvailable": true,
+    "recommendedAction": "Standard maintenance and debris clearance"
+  },
+  {
+    "roadId": "road-3",
+    "basePriorityScore": 52,
+    "hospitalAccessImpact": "Low",
+    "alternateRouteAvailable": true,
+    "recommendedAction": "Monitor and restore when resources permit"
+  },
+  {
+    "roadId": "road-7",
+    "basePriorityScore": 45,
+    "hospitalAccessImpact": "Low",
+    "alternateRouteAvailable": true,
+    "recommendedAction": "Drainage maintenance and flood barrier check"
+  },
+  {
+    "roadId": "road-10",
+    "basePriorityScore": 38,
+    "hospitalAccessImpact": "Minimal",
+    "alternateRouteAvailable": true,
+    "recommendedAction": "Schedule routine inspection"
+  }
+]

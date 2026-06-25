@@ -1,0 +1,102 @@
+{
+  "flood": {
+    "name": "Flood",
+    "description": "Heavy monsoon flooding affecting low-lying areas and bridges",
+    "multipliers": {
+      "bridge": 1.6,
+      "low_lying": 1.5,
+      "hill_road": 0.8,
+      "tree_covered": 1.0,
+      "major_corridor": 1.2,
+      "default": 1.0
+    },
+    "vehicleMultipliers": {
+      "ambulance": 1.0,
+      "fire-truck": 1.2,
+      "relief-truck": 1.1,
+      "evacuation-bus": 1.4
+    },
+    "baseRiskLevel": "ELEVATED RISK",
+    "aiTitle": "Flood risk detected near River Bridge Corridor",
+    "aiEvidence": [
+      "High blockage probability on low-lying road segments",
+      "Bridge corridor has high network centrality",
+      "Hospital access may be delayed for three wards"
+    ]
+  },
+  "landslide": {
+    "name": "Landslide",
+    "description": "Landslide risk on hill roads and mountain passes",
+    "multipliers": {
+      "bridge": 1.0,
+      "low_lying": 0.8,
+      "hill_road": 1.6,
+      "tree_covered": 1.3,
+      "major_corridor": 1.0,
+      "default": 1.0
+    },
+    "vehicleMultipliers": {
+      "ambulance": 1.1,
+      "fire-truck": 1.3,
+      "relief-truck": 1.2,
+      "evacuation-bus": 1.5
+    },
+    "baseRiskLevel": "ELEVATED RISK",
+    "aiTitle": "Landslide risk on Hill View Connector and Mussoorie Diversion",
+    "aiEvidence": [
+      "Hill roads show elevated blockage probability",
+      "Mussoorie Diversion Road has previous debris history",
+      "Evacuation shelter access may be compromised"
+    ]
+  },
+  "cyclone": {
+    "name": "Cyclone",
+    "description": "Cyclone impact on tree-lined and major corridor roads",
+    "multipliers": {
+      "bridge": 1.2,
+      "low_lying": 1.1,
+      "hill_road": 1.1,
+      "tree_covered": 1.5,
+      "major_corridor": 1.4,
+      "default": 1.0
+    },
+    "vehicleMultipliers": {
+      "ambulance": 1.1,
+      "fire-truck": 1.1,
+      "relief-truck": 1.3,
+      "evacuation-bus": 1.4
+    },
+    "baseRiskLevel": "CRITICAL",
+    "aiTitle": "Cyclone impact predicted on major corridors",
+    "aiEvidence": [
+      "Tree-covered roads face high debris blockage risk",
+      "Major corridors may experience wind damage to signage and infrastructure",
+      "Multiple emergency routes may need rerouting"
+    ]
+  },
+  "normal": {
+    "name": "Normal",
+    "description": "No active disaster scenario — routine monitoring",
+    "multipliers": {
+      "bridge": 1.0,
+      "low_lying": 1.0,
+      "hill_road": 1.0,
+      "tree_covered": 1.0,
+      "major_corridor": 1.0,
+      "default": 1.0
+    },
+    "vehicleMultipliers": {
+      "ambulance": 1.0,
+      "fire-truck": 1.0,
+      "relief-truck": 1.0,
+      "evacuation-bus": 1.0
+    },
+    "baseRiskLevel": "NORMAL",
+    "aiTitle": "No active threats detected — routine monitoring active",
+    "aiEvidence": [
+      "All road segments are within normal operational parameters",
+      "Emergency routes are fully accessible",
+      "Satellite imagery shows no significant changes"
+    ]
+  }
+}

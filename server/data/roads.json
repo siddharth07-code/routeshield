@@ -1,0 +1,252 @@
+[
+  {
+    "id": "road-1",
+    "name": "River Bridge Corridor",
+    "coordinates": [[180, 280], [340, 240]],
+    "criticality": 0.91,
+    "criticalityLevel": "critical",
+    "blockageProbability": 0.76,
+    "affectedWards": 3,
+    "populationAffected": 8200,
+    "confidence": 0.88,
+    "roadType": "bridge",
+    "isHillRoad": false,
+    "isLowLying": true,
+    "isTreeCovered": false,
+    "isMajorCorridor": true,
+    "emergencyImportance": "high",
+    "nearbyEmergencyLocations": ["District Hospital", "Flood-Affected Ward 12"],
+    "occlusionDetails": [
+      { "type": "Floodwater obstruction", "confidence": 0.61, "description": "Seasonal flooding obscures road surface near bridge approach" }
+    ],
+    "explanation": [
+      "Connects multiple residential wards to the main hospital corridor",
+      "Has limited alternate routes",
+      "Located in a flood-prone low-lying zone"
+    ]
+  },
+  {
+    "id": "road-2",
+    "name": "Hill View Connector",
+    "coordinates": [[100, 160], [240, 100]],
+    "criticality": 0.78,
+    "criticalityLevel": "high",
+    "blockageProbability": 0.62,
+    "affectedWards": 2,
+    "populationAffected": 5400,
+    "confidence": 0.74,
+    "roadType": "hill_road",
+    "isHillRoad": true,
+    "isLowLying": false,
+    "isTreeCovered": true,
+    "isMajorCorridor": false,
+    "emergencyImportance": "high",
+    "nearbyEmergencyLocations": ["Fire & Rescue Station"],
+    "occlusionDetails": [
+      { "type": "Shadow occlusion", "confidence": 0.74, "description": "Hill shadow obscures road continuity in satellite imagery" }
+    ],
+    "explanation": [
+      "Primary connection between hilltop settlements and valley services",
+      "Prone to landslide during monsoon season",
+      "Alternate route adds significant travel time"
+    ]
+  },
+  {
+    "id": "road-3",
+    "name": "East Market Road",
+    "coordinates": [[360, 200], [500, 180]],
+    "criticality": 0.54,
+    "criticalityLevel": "medium",
+    "blockageProbability": 0.31,
+    "affectedWards": 1,
+    "populationAffected": 3100,
+    "confidence": 0.92,
+    "roadType": "urban",
+    "isHillRoad": false,
+    "isLowLying": false,
+    "isTreeCovered": false,
+    "isMajorCorridor": false,
+    "emergencyImportance": "medium",
+    "nearbyEmergencyLocations": ["Relief Camp A"],
+    "occlusionDetails": [],
+    "explanation": [
+      "Serves commercial district with moderate traffic",
+      "Multiple parallel streets available as alternatives",
+      "Low flood and landslide risk"
+    ]
+  },
+  {
+    "id": "road-4",
+    "name": "Station Access Road",
+    "coordinates": [[280, 340], [440, 360]],
+    "criticality": 0.67,
+    "criticalityLevel": "high",
+    "blockageProbability": 0.44,
+    "affectedWards": 2,
+    "populationAffected": 6100,
+    "confidence": 0.85,
+    "roadType": "arterial",
+    "isHillRoad": false,
+    "isLowLying": true,
+    "isTreeCovered": false,
+    "isMajorCorridor": true,
+    "emergencyImportance": "high",
+    "nearbyEmergencyLocations": ["Emergency Operations Center", "District Hospital"],
+    "occlusionDetails": [],
+    "explanation": [
+      "Main arterial connecting railway station to city center",
+      "Critical for evacuation logistics",
+      "Partially low-lying near canal crossing"
+    ]
+  },
+  {
+    "id": "road-5",
+    "name": "Rajpur Emergency Link",
+    "coordinates": [[80, 260], [180, 340]],
+    "criticality": 0.85,
+    "criticalityLevel": "critical",
+    "blockageProbability": 0.58,
+    "affectedWards": 3,
+    "populationAffected": 7600,
+    "confidence": 0.79,
+    "roadType": "emergency_link",
+    "isHillRoad": false,
+    "isLowLying": false,
+    "isTreeCovered": true,
+    "isMajorCorridor": true,
+    "emergencyImportance": "critical",
+    "nearbyEmergencyLocations": ["District Hospital", "Fire & Rescue Station"],
+    "occlusionDetails": [
+      { "type": "Tree cover", "confidence": 0.89, "description": "Dense tree canopy near Rajpur obscures road edges in satellite view" }
+    ],
+    "explanation": [
+      "Sole emergency link between Rajpur area and main hospital",
+      "Used by ambulances as primary route",
+      "Tree canopy makes satellite assessment uncertain"
+    ]
+  },
+  {
+    "id": "road-6",
+    "name": "Mussoorie Diversion Road",
+    "coordinates": [[60, 80], [180, 160]],
+    "criticality": 0.72,
+    "criticalityLevel": "high",
+    "blockageProbability": 0.69,
+    "affectedWards": 2,
+    "populationAffected": 4300,
+    "confidence": 0.71,
+    "roadType": "hill_road",
+    "isHillRoad": true,
+    "isLowLying": false,
+    "isTreeCovered": true,
+    "isMajorCorridor": false,
+    "emergencyImportance": "medium",
+    "nearbyEmergencyLocations": ["Evacuation Shelter"],
+    "occlusionDetails": [
+      { "type": "Landslide debris", "confidence": 0.66, "description": "Previous landslide zone with uncertain road stability" }
+    ],
+    "explanation": [
+      "Key diversion route when main Mussoorie road is blocked",
+      "High landslide susceptibility zone",
+      "Limited width restricts heavy vehicle access"
+    ]
+  },
+  {
+    "id": "road-7",
+    "name": "Canal Side Bypass",
+    "coordinates": [[340, 320], [500, 280]],
+    "criticality": 0.48,
+    "criticalityLevel": "medium",
+    "blockageProbability": 0.52,
+    "affectedWards": 1,
+    "populationAffected": 2800,
+    "confidence": 0.83,
+    "roadType": "bypass",
+    "isHillRoad": false,
+    "isLowLying": true,
+    "isTreeCovered": false,
+    "isMajorCorridor": false,
+    "emergencyImportance": "low",
+    "nearbyEmergencyLocations": ["Relief Camp A"],
+    "occlusionDetails": [],
+    "explanation": [
+      "Secondary bypass along canal with moderate traffic",
+      "Flood-prone during heavy rainfall",
+      "Not critical for emergency access but useful for relief transport"
+    ]
+  },
+  {
+    "id": "road-8",
+    "name": "District Hospital Road",
+    "coordinates": [[340, 240], [440, 360]],
+    "criticality": 0.89,
+    "criticalityLevel": "critical",
+    "blockageProbability": 0.35,
+    "affectedWards": 4,
+    "populationAffected": 9500,
+    "confidence": 0.94,
+    "roadType": "hospital_access",
+    "isHillRoad": false,
+    "isLowLying": false,
+    "isTreeCovered": false,
+    "isMajorCorridor": true,
+    "emergencyImportance": "critical",
+    "nearbyEmergencyLocations": ["District Hospital", "Emergency Operations Center"],
+    "occlusionDetails": [],
+    "explanation": [
+      "Primary access road to District Hospital",
+      "Serves four wards with highest population density",
+      "Well-maintained but single point of failure for hospital access"
+    ]
+  },
+  {
+    "id": "road-9",
+    "name": "Relief Camp Connector",
+    "coordinates": [[500, 180], [560, 300]],
+    "criticality": 0.61,
+    "criticalityLevel": "medium",
+    "blockageProbability": 0.28,
+    "affectedWards": 1,
+    "populationAffected": 3800,
+    "confidence": 0.91,
+    "roadType": "connector",
+    "isHillRoad": false,
+    "isLowLying": false,
+    "isTreeCovered": false,
+    "isMajorCorridor": false,
+    "emergencyImportance": "medium",
+    "nearbyEmergencyLocations": ["Relief Camp A"],
+    "occlusionDetails": [],
+    "explanation": [
+      "Connects relief camp to main supply routes",
+      "Moderate criticality for sustained relief operations",
+      "Good visibility in satellite imagery"
+    ]
+  },
+  {
+    "id": "road-10",
+    "name": "Forest Edge Road",
+    "coordinates": [[100, 100], [100, 220]],
+    "criticality": 0.39,
+    "criticalityLevel": "low",
+    "blockageProbability": 0.41,
+    "affectedWards": 1,
+    "populationAffected": 1900,
+    "confidence": 0.68,
+    "roadType": "rural",
+    "isHillRoad": false,
+    "isLowLying": false,
+    "isTreeCovered": true,
+    "isMajorCorridor": false,
+    "emergencyImportance": "low",
+    "nearbyEmergencyLocations": [],
+    "occlusionDetails": [
+      { "type": "Dense canopy", "confidence": 0.58, "description": "Forest canopy severely limits satellite road detection" }
+    ],
+    "explanation": [
+      "Rural road connecting forest-edge settlements",
+      "Low population density",
+      "Tree cover makes road condition assessment difficult"
+    ]
+  }
+]
