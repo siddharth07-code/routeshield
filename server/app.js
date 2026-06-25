@@ -41,9 +41,13 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal server error' });
 });
 
-app.listen(PORT, () => {
-  console.log(`\n  🛰️  RouteShield AI Backend`);
-  console.log(`  ─────────────────────────`);
-  console.log(`  Running on http://localhost:${PORT}`);
-  console.log(`  Health: http://localhost:${PORT}/api/health\n`);
-});
+if (process.env.NODE_ENV !== 'production' || process.env.RENDER) {
+  app.listen(PORT, () => {
+    console.log(`\n  🛰️  RouteShield AI Backend`);
+    console.log(`  ─────────────────────────`);
+    console.log(`  Running on http://localhost:${PORT}`);
+    console.log(`  Health: http://localhost:${PORT}/api/health\n`);
+  });
+}
+
+module.exports = app;
