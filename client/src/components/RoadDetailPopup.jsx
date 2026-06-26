@@ -8,7 +8,7 @@ export default function RoadDetailPopup({ road, onClose, position }) {
 
   return (
     <div
-      className="absolute z-30 w-80 glass glass-highlight p-5 fade-slide-in"
+      className="absolute z-30 w-80 glass glass-highlight p-5 fade-slide-in bg-slate-950/85"
       style={{
         left: Math.min(position?.x || 200, 320),
         top: Math.min(position?.y || 100, 250),
