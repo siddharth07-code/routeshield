@@ -26,14 +26,21 @@ app.use('/api/emergency-routes', emergencyRoutes);
 app.use('/api/recovery-priorities', recoveryRoutes);
 app.use('/api/drone-inspection', droneRoutes);
 
-// Serve built frontend in production
-const clientDistPath = path.join(__dirname, '..', 'client', 'dist');
-app.use(express.static(clientDistPath));
+// Serve built frontend in production (Render or local only)
+if (!process.env.VERCEL) {
+  const clientDistPath = path.join(__dirname, '..', 'client', 'dist');
+  app.use(express.static(clientDistPath));
 
-// SPA fallback — serve index.html for any non-API route
-app.get('*', (req, res) => {
-  res.sendFile(path.join(clientDistPath, 'index.html'));
-});
+  // SPA fallback — serve index.html for any non-API route
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(clientDistPath, 'index.html'));
+  });
+} else {
+  // On Vercel, if an API route isn't found, return a 404 JSON instead of hitting the SPA fallback
+  app.get('*', (req, res) => {
+    res.status(404).json({ error: 'API route not found' });
+  });
+}
 
 // Error handler
 app.use((err, req, res, next) => {
