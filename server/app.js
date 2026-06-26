@@ -32,12 +32,17 @@ if (!process.env.VERCEL) {
   app.use(express.static(clientDistPath));
 
   // SPA fallback — serve index.html for any non-API route
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(clientDistPath, 'index.html'));
+  app.use((req, res, next) => {
+    // Only fallback for GET requests that accept HTML
+    if (req.method === 'GET' && req.accepts('html')) {
+      res.sendFile(path.join(clientDistPath, 'index.html'));
+    } else {
+      next();
+    }
   });
 } else {
   // On Vercel, if an API route isn't found, return a 404 JSON instead of hitting the SPA fallback
-  app.get('*', (req, res) => {
+  app.use((req, res) => {
     res.status(404).json({ error: 'API route not found' });
   });
 }
