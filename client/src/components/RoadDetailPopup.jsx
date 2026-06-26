@@ -71,7 +71,7 @@ export default function RoadDetailPopup({ road, onClose, position }) {
         </div>
       )}
 
-      <div className="text-xs text-slate-600 mt-3 flex items-center gap-1">
+      <div className="text-xs text-slate-400 mt-3 flex items-center gap-1">
         <span className="inline-block w-1.5 h-1.5 rounded-full bg-amber-400/50" />
         Population affected: {road.populationAffected?.toLocaleString()}
       </div>
