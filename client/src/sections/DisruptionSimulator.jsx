@@ -147,7 +147,7 @@ export default function DisruptionSimulator({ scenario, onScenarioChange }) {
       </GlassCard>
 
       {/* Map */}
-      <div className="relative">
+      <div className="relative z-40">
         <RoadMap
           roads={roads}
           onRoadClick={handleRoadClick}

@@ -87,7 +87,7 @@ export default function RoadIntelligence({ scenario }) {
       </div>
 
       {/* Map with view-specific styling */}
-      <div className="relative">
+      <div className="relative z-40">
         <RoadMap
           roads={roads}
           onRoadClick={handleRoadClick}
