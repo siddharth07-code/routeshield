@@ -23,7 +23,6 @@ export default function DisruptionSimulator({ scenario, onScenarioChange }) {
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [selectedRoadDetail, setSelectedRoadDetail] = useState(null);
-  const [popupPos, setPopupPos] = useState(null);
 
   useEffect(() => {
     fetchRoads().then(setRoads).catch(console.error);
@@ -53,9 +52,6 @@ export default function DisruptionSimulator({ scenario, onScenarioChange }) {
     setSelectedRoadId(road.id);
     if (!result) {
       setSelectedRoadDetail(road);
-      const midX = (road.coordinates[0][0] + road.coordinates[1][0]) / 2;
-      const midY = (road.coordinates[0][1] + road.coordinates[1][1]) / 2;
-      setPopupPos({ x: midX + 20, y: midY - 40 });
     }
   };
 
@@ -147,7 +143,7 @@ export default function DisruptionSimulator({ scenario, onScenarioChange }) {
       </GlassCard>
 
       {/* Map */}
-      <div className="relative z-40">
+      <div className="relative">
         <RoadMap
           roads={roads}
           onRoadClick={handleRoadClick}
@@ -155,10 +151,10 @@ export default function DisruptionSimulator({ scenario, onScenarioChange }) {
           blockedRoadId={result ? selectedRoadId : null}
           alternateRoute={result?.recommendedRoute}
         />
+        <div className="scan-line" />
         {selectedRoadDetail && !result && (
           <RoadDetailPopup
             road={selectedRoadDetail}
-            position={popupPos}
             onClose={() => setSelectedRoadDetail(null)}
           />
         )}

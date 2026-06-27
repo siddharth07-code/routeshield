@@ -13,7 +13,6 @@ export default function Overview({ scenario, onScenarioChange }) {
   const [dashboard, setDashboard] = useState(null);
   const [roads, setRoads] = useState([]);
   const [selectedRoad, setSelectedRoad] = useState(null);
-  const [popupPos, setPopupPos] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -31,9 +30,6 @@ export default function Overview({ scenario, onScenarioChange }) {
     try {
       const detail = await fetchRoadDetail(road.id);
       setSelectedRoad(detail);
-      const midX = (road.coordinates[0][0] + road.coordinates[1][0]) / 2;
-      const midY = (road.coordinates[0][1] + road.coordinates[1][1]) / 2;
-      setPopupPos({ x: midX + 20, y: midY - 40 });
     } catch (err) {
       console.error(err);
     }
@@ -90,16 +86,16 @@ export default function Overview({ scenario, onScenarioChange }) {
 
       {/* Map + AI Summary */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        <div className="lg:col-span-2 relative z-40">
+        <div className="lg:col-span-2 relative">
           <RoadMap
             roads={roads}
             onRoadClick={handleRoadClick}
             selectedRoadId={selectedRoad?.id}
           />
+          <div className="scan-line" />
           {selectedRoad && (
             <RoadDetailPopup
               road={selectedRoad}
-              position={popupPos}
               onClose={() => setSelectedRoad(null)}
             />
           )}

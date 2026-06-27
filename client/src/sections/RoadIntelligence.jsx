@@ -43,7 +43,6 @@ export default function RoadIntelligence({ scenario }) {
   const [activeView, setActiveView] = useState('satellite');
   const [roads, setRoads] = useState([]);
   const [selectedRoad, setSelectedRoad] = useState(null);
-  const [popupPos, setPopupPos] = useState(null);
 
   useEffect(() => {
     fetchRoads().then(setRoads).catch(console.error);
@@ -53,9 +52,6 @@ export default function RoadIntelligence({ scenario }) {
     try {
       const detail = await fetchRoadDetail(road.id);
       setSelectedRoad(detail);
-      const midX = (road.coordinates[0][0] + road.coordinates[1][0]) / 2;
-      const midY = (road.coordinates[0][1] + road.coordinates[1][1]) / 2;
-      setPopupPos({ x: midX + 20, y: midY - 40 });
     } catch (err) {
       console.error(err);
     }
@@ -87,16 +83,17 @@ export default function RoadIntelligence({ scenario }) {
       </div>
 
       {/* Map with view-specific styling */}
-      <div className="relative z-40">
+      <div className="relative">
         <RoadMap
           roads={roads}
           onRoadClick={handleRoadClick}
           selectedRoadId={selectedRoad?.id}
           className={activeView === 'heatmap' ? 'ring-1 ring-red-400/20' : activeView === 'mask' ? 'ring-1 ring-sky-400/20' : ''}
         />
+        <div className="scan-line" />
 
         {/* View-specific overlay label */}
-        <div className="absolute top-3 left-3">
+        <div className="absolute top-3 left-3 z-10">
           <span className="glass-subtle px-3 py-1.5 text-xs text-slate-300 flex items-center gap-1.5" style={{ borderRadius: 10 }}>
             {views.find(v => v.id === activeView)?.label}
           </span>
@@ -105,7 +102,6 @@ export default function RoadIntelligence({ scenario }) {
         {selectedRoad && (
           <RoadDetailPopup
             road={selectedRoad}
-            position={popupPos}
             onClose={() => setSelectedRoad(null)}
           />
         )}

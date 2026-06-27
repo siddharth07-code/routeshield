@@ -1,4 +1,4 @@
-import { LayoutDashboard, Route, Zap, Ambulance, ListOrdered, Brain, Satellite } from 'lucide-react';
+import { LayoutDashboard, Route, Zap, Ambulance, ListOrdered, Brain, Satellite, Home } from 'lucide-react';
 
 const navItems = [
   { id: 'overview', label: 'Overview', icon: LayoutDashboard },
@@ -9,7 +9,7 @@ const navItems = [
   { id: 'about', label: 'About Model', icon: Brain },
 ];
 
-export default function Sidebar({ activeSection, onNavigate }) {
+export default function Sidebar({ activeSection, onNavigate, onBackToHome }) {
   return (
     <aside className="w-64 h-full flex flex-col p-4 flex-shrink-0 relative z-10">
       {/* Logo */}
@@ -37,7 +37,7 @@ export default function Sidebar({ activeSection, onNavigate }) {
                 transition-all duration-200 ease-out text-left
                 ${isActive
                   ? 'bg-white/10 text-slate-100 shadow-lg border border-white/10 backdrop-blur-xl'
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
+                  : 'text-slate-400 hover:text-slate-200 hover:bg-white/5 border border-transparent'
                 }
               `}
             >
@@ -48,8 +48,20 @@ export default function Sidebar({ activeSection, onNavigate }) {
         })}
       </nav>
 
+      {/* Back to Home */}
+      {onBackToHome && (
+        <button
+          onClick={onBackToHome}
+          className="flex items-center gap-2 px-3.5 py-2.5 rounded-2xl text-sm font-medium
+            text-slate-500 hover:text-slate-300 hover:bg-white/5 transition-all duration-200 mb-3 w-full text-left"
+        >
+          <Home size={16} />
+          Back to Home
+        </button>
+      )}
+
       {/* Bottom */}
-      <div className="glass-subtle p-3 mt-4" style={{ borderRadius: 14 }}>
+      <div className="glass-subtle p-3" style={{ borderRadius: 14 }}>
         <div className="text-[10px] text-slate-500 leading-relaxed">
           Prototype — simulated data for demonstration. Not connected to live satellite feeds.
         </div>
